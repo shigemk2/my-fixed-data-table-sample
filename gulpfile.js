@@ -2,13 +2,12 @@ var gulp = require('gulp');
 var browserify = require('browserify');
 var source = require("vinyl-source-stream");
 var reactify = require('reactify');
+var babelify = require('babelify');
 
 gulp.task('browserify', function(){
-  var b = browserify({
-    entries: ['./src/example.jsx'],
-    transform: [reactify]
-  });
-  return b.bundle()
+  return browserify('./src/example.js')
+    .transform(babelify,{presets: ["react"]})
+    .bundle()
     .pipe(source('example.js'))
     .pipe(gulp.dest('./dist'));
 });
