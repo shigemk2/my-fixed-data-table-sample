@@ -1,3 +1,3 @@
-# my-react-template
+# my-fixed-data-table-sample
 
-Reactのオレオレテンプレート
+Reactモジュールのfixed-data-tableを利用したサンプル。READMEのサンプルコードがES6をベースにかかれているので、オレオレReactテンプレートも書き直す必要があると思います。
